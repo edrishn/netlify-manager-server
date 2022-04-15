@@ -30,6 +30,4 @@ app.use(function (err, req, res, next) {
   else res.status(500).send(err.stack);
 });
 
-var listener = app.listen(8080, function () {
-  console.log("Listening on port " + listener.address().port);
-});
+module.exports = app;

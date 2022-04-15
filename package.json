@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "netlify-lambda build netlify/functions",
-    "start": "nodemon app.js localhost 8080"
+    "start": "nodemon index.js localhost 8080"
   },
   "dependencies": {
     "@mswjs/http-middleware": "0.2.0",
