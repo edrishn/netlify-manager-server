@@ -1,8 +1,7 @@
 var { rest } = require("msw");
 
 if (typeof localStorage === "undefined" || localStorage === null) {
-  var LocalStorage = require("node-localstorage").LocalStorage;
-  localStorage = new LocalStorage();
+  localStorage = require("localstorage-memory");
 }
 
 let handlers = [
