@@ -1,8 +1,8 @@
 var { rest } = require("msw");
 
-if (typeof localStorage === "undefined" || localStorage === null) {
-  localStorage = require("localstorage-memory");
-}
+// if (typeof localStorage === "undefined" || localStorage === null) {
+//   localStorage = require("localstorage-memory");
+// }
 
 let handlers = [
   rest.post("/AddUserRole", function (req, res, ctx) {
@@ -122,10 +122,11 @@ let handlers = [
 
   rest.get("/GetUsers", function (req, res, ctx) {
     console.log("here in Get");
-    let database = localStorage.getItem("Database");
-    database = JSON.parse(database);
-    let users = database.User;
-    console.log("users are: ", users);
+    //let database = localStorage.getItem("Database");
+    //database = JSON.parse(database);
+    //let users = database.User;
+    //console.log("users are: ", users);
+    var users = {};
 
     return res(ctx.status(200), ctx.json(users));
   }),
