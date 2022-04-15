@@ -1,8 +1,8 @@
 var { rest } = require("msw");
 
-// if (typeof localStorage === "undefined" || localStorage === null) {
-//   localStorage = require("localstorage-memory");
-// }
+if (typeof localStorage === "undefined" || localStorage === null) {
+  localStorage = require("localstorage-memory");
+}
 
 let handlers = [
   rest.post("/AddUserRole", function (req, res, ctx) {
