@@ -1,0 +1,25 @@
+{
+  "name": "managerserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "netlify-lambda build netlify/functions",
+    "start": "nodemon app.js localhost 8080"
+  },
+  "dependencies": {
+    "@mswjs/http-middleware": "0.2.0",
+    "cookie-parser": "1.4.5",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "morgan": "1.10.0",
+    "msw": "0.36.4",
+    "netlify-lambda": "2.0.15",
+    "node-localstorage": "2.2.1",
+    "serverless-http": "3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  },
+  "keywords": []
+}
