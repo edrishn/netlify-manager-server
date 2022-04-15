@@ -122,11 +122,10 @@ let handlers = [
 
   rest.get("/GetUsers", function (req, res, ctx) {
     console.log("here in Get");
-    //let database = localStorage.getItem("Database");
-    //database = JSON.parse(database);
-    //let users = database.User;
-    //console.log("users are: ", users);
-    var users = {};
+    let database = localStorage.getItem("Database");
+    database = JSON.parse(database);
+    let users = database.User;
+    console.log("users are: ", users);
 
     return res(ctx.status(200), ctx.json(users));
   }),
